@@ -22,7 +22,7 @@ function sendData(values) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(values)
+        body: values
     })
     .then(res => {
         return res.json();
