@@ -16,14 +16,35 @@ function toggleDisplay(element) {
     }
 }
 
+function sendData(values) {
+    fetch("php/insert-data.php", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: values
+    })
+    .then(res => {
+        return res.json();
+    })
+    .then(data => {
+        alert(data);
+    })
+    .catch(err => {
+        alert(err);
+    })
+}
+
 form_.addEventListener("submit", (e) => {
     e.preventDefault();
+    const object_ = {};
     const inps = [form_.elements];
-    inps.forEach((element, index) => {
+    inps.forEach((element) => {
         for(let i = 0; i < element.length; i++) {
             if(element[i].type != "button" && element[i].type != "submit") {
-                console.log(element[i].name, element[i].value);
+                object_[element[i].name] = element[i].value;
             }
         }
     });
+    sendData(object_);
 })
