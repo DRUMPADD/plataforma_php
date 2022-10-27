@@ -19,7 +19,7 @@ function toggleDisplay(element) {
 function sendData(values) {
     fetch("insert-data.php", {
         method: 'POST',
-        body: values
+        body: JSON.stringify(values)
     })
     .then(res => {
         return res.json();
