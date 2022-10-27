@@ -19,9 +19,6 @@ function toggleDisplay(element) {
 function sendData(values) {
     fetch("/php/insert-data.php", {
         method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
         body: values
     })
     .then(res => {
