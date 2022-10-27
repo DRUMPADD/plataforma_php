@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CALENDAR -->
+    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+    <script src="js/mobiscroll.javascript.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <li>
+                <a href="#" class="open">
+                    <span>Link</span>
+                    <span><i class="fa-solid fa-circle-arrow-down"></i></span>
+                </a>
+                <ul class="dropdown not-visible">
+                    <li><a href="#" class="link">PYTHON</a></li>
+                    <li><a href="#" class="link">PHP</a></li>
+                    <li><a href="#" class="link">JAVA</a></li>
+                    <li><a href="#" class="link">C++</a></li>
+                </ul>
+            </li>
+        </nav>
+    </header>
+    <div class="container">
+        <form>
+            <div class="disp-flex">
+                <div>
+                    <label class="labels">Fecha de solicitud</label>
+                    <div class="input-date">
+                        <input type="text" name="fecha_sol" class="input-text" placeholder="MM/YYYY/DD">
+                        <div class="calendar-box">
+                            <button type="button" class="btn-calendar">
+                                <i class="fa-regular fa-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Fecha inicio de trabajos</label>
+                    <div class="input-date">
+                        <input type="text" name="fecha_ini" class="input-text" placeholder="MM/YYYY/DD">
+                        <div class="calendar-box">
+                            <button type="button" class="btn-calendar">
+                                <i class="fa-regular fa-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Fecha cierre de trabajos</label>
+                    <div class="input-date">
+                        <input type="text" name="fecha_cie" class="input-text" placeholder="MM/YYYY/DD">
+                        <div class="calendar-box">
+                            <button type="button" class="btn-calendar">
+                                <i class="fa-regular fa-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="disp-flex">
+                <div>
+                    <label class="labels">Empresa</label>
+                    <div>
+                        <input type="text" name="empresa" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Supervisor de compañía</label>
+                    <div>
+                        <input type="text" name="sup_comp" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Clase permiso</label>
+                    <div>
+                        <div class="input-radio">
+                            <input type="radio" id="clase_comp_a" name="clase_perm" value="PERMISO A">
+                            <label for="clase_comp_a">Azul Clase A</label>
+                        </div>
+                        <div class="input-radio">
+                            <input type="radio" id="clase_comp_b" name="clase_perm" value="PERMISO B">
+                            <label for="clase_comp_b">Azul Clase B</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Folio PPTR</label>
+                    <div>
+                        <input type="text" name="folio_pptr" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="disp-flex">
+                <div>
+                    <label class="labels">Trabajo</label>
+                    <div>
+                        <input type="text" name="tr" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Sitio de trabajo</label>
+                    <div>
+                        <input type="text" name="sit_tr" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Categoría del trabajo</label>
+                    <div>
+                        <input type="text" name="cat_tr" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+            </div>
+            <div class="input-desc">
+                <label class="labels">Descripción del trabajo</label>
+                <div>
+                    <input type="text" name="desc_tr" class="input-text" placeholder="Escribe tu respuesta">
+                </div>
+            </div>
+            <div class="disp-flex">
+                <div>
+                    <label class="labels">Encargado de sitio</label>
+                    <div>
+                        <input type="text" name="enc_sit" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+                <div>
+                    <label class="labels">Encargado de Área</label>
+                    <div>
+                        <input type="text" name="enc_area" class="input-text" placeholder="Escribe tu respuesta">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="center">
+                <div class="btn-send">
+                    <button type="submit" class="btnSubmit">
+                        Registrar
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

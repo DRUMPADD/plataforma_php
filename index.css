@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.not-visible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    width: 17%;
+    height: 100vh;
+    border-right-color: #999;
+    border-right-style: solid;
+    border-right-width: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+nav > li {
+    /* margin: 10px 0; */
+    position: relative;
+}
+
+li a {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    padding: 10px 20px;
+}
+
+.open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 10px;
+    transition: all .4s linear;
+}
+
+span i {
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul.dropdown li {
+    display: block;
+}
+
+ul.dropdown {
+    width: 100%;
+}
+
+ul.dropdown.visible {
+    display: block;
+}
+
+.link {
+    display: block;
+    transition: all .3s linear;
+}
+
+.link:hover {
+    background-color: #999;
+}
+
+.open:hover {
+    color: #fff;
+    background-color: #112C66;
+}
+
+.open:active {
+    background-color: #112C66;
+}
+
+/* ?? Contenedor */
+.container {
+    width: 70%;
+    margin: 200px auto;
+}
+
+/* ?? Formulario dentro de contenedor */
+form {
+    border: 7px solid #999;
+    border-radius: 7px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.disp-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.disp-flex div {
+    margin: 10px 8px;
+}
+
+.labels {
+    font-size: 21px;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+input {
+    appearance: none;
+    border: 2px solid #999;
+    position: relative;
+    transition: 0.2s all linear;
+}
+
+.input-text {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.input-radio,
+.input-date {
+    display: flex;
+    align-items: center;
+}
+
+.input-date > input {
+    border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.input-date > input, .input-date > .calendar-box {
+    margin: 0;
+}
+
+.input-desc {
+    margin: 0 20px;
+}
+
+.input-desc > div > input {
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.btn-calendar {
+    margin-left: -3px;
+    font-size: 23px;
+    padding: 5px;
+    border-style: solid;
+    border-color: #999;
+    border-left-color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    transition: .3s all linear;
+}
+
+input:checked {
+    border: 6px solid #000;
+}
+
+.input-date:hover > input, .input-date:hover button {
+    border-color: #1998d7;
+    box-shadow: 1px 1px 10px #1998d7;
+} 
+
+.btn-calendar:hover {
+    color: #1998d7;
+}
+
+input:hover {
+    border-color: #1998d7;
+    box-shadow: 1px 1px 10px #1998d7;
+}
+
+
+.btn-send {
+    display: flex;
+}
+
+.btnSubmit {
+    font-size: 20px;
+    padding: 8px 12px;
+    border: 2px solid #999;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.btnSubmit:hover {
+    border-color: #1998d7;
+    background-color: #1998d7;
+}
+.btnSubmit:hover .fa-check {
+    color: #000;
+    background-color: #fff;
+}
+
+.fa-check {
+    border-radius: 50%;
+    background-color: #1998d7;
+    padding: 3px;
+    color: #fff;
+    font-weight: 600;
+    transition: all .3s linear;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        max-height: 700px;
+        overflow-y: scroll;
+        transition: all .2s linear;
+    }
+}
