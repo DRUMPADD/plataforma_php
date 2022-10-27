@@ -1,11 +1,10 @@
 <?php
     try {
         $connect = mysqli_connect(
-            $hostname = $_ENV["MYSQL_HOST"],
-            $username = $_ENV["MYSQL_USER"],
-            $password = $_ENV["MYSQL_PASSWORD"],
-            $database = $_ENV["MYSQL_NAME"],
-            $post = $_ENV["MYSQL_PORT"],
+            "162.241.62.45",
+            "fluidos4_hazardousback",
+            "0uFM&UV-G13+",
+            "fluidos4_sigssmac",
         );
     } catch (mysqli_error $e) {
         echo mysqli_error($connect);
