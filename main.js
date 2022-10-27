@@ -17,7 +17,7 @@ function toggleDisplay(element) {
 }
 
 function sendData(values) {
-    fetch("/insert-data.php", {
+    fetch("insert-data.php", {
         method: 'POST',
         body: values
     })
